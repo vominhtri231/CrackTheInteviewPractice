@@ -1,5 +1,4 @@
-package tri.vo.dslearn;
-
+package tri.vo.dslearn.binaryindexedtree;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,6 @@ import java.util.List;
 import java.util.function.BinaryOperator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 class BinaryIndexedTreeTest {
 
@@ -22,7 +20,8 @@ class BinaryIndexedTreeTest {
     private final Integer defaultValue = 0;
 
     // The inverse operation: Subtraction (a - b)
-    // For calculateRange(right, left-1): result = calculate(right) - calculate(left-1)
+    // For calculateRange(right, left-1): result = calculate(right) -
+    // calculate(left-1)
     // For update(oldVal, newVal): delta = newVal - oldVal
     private final BinaryOperator<Integer> invertFunc = (a, b) -> a - b;
 
@@ -86,7 +85,8 @@ class BinaryIndexedTreeTest {
         int oldVal = 2;
         int newVal = 10;
 
-        // Note: Your update method should internally handle the delta calculation: add(index, newVal - oldVal)
+        // Note: Your update method should internally handle the delta calculation:
+        // add(index, newVal - oldVal)
         bit.update(indexToUpdate, oldVal, newVal);
 
         // Test if total sum is correct: 22 + 8 = 30

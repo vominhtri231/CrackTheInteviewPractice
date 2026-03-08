@@ -1,4 +1,4 @@
-package tri.vo.dslearn;
+package tri.vo.dslearn.binaryindexedtree;
 
 public class AddBinaryIndexed1Based {
     private final int[] bits;
