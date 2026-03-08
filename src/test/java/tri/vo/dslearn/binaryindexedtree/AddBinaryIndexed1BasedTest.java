@@ -1,4 +1,4 @@
-package tri.vo.dslearn;
+package tri.vo.dslearn.binaryindexedtree;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AddBinaryIndexed1BasedTest {
 
     private AddBinaryIndexed1Based bit;
-    private final int[] initialData = {5, 1, 2, 7, 3, 4}; // N=6 elements
+    private final int[] initialData = { 5, 1, 2, 7, 3, 4 }; // N=6 elements
 
     // --- Test Setup ---
 
@@ -153,7 +153,7 @@ class AddBinaryIndexed1BasedTest {
     @Test
     void testNegativeValues() {
         // Create a BIT with negative values
-        int[] negativeData = {-5, 10, -3, 7, -2, 8};
+        int[] negativeData = { -5, 10, -3, 7, -2, 8 };
         AddBinaryIndexed1Based negativeBit = new AddBinaryIndexed1Based(negativeData);
 
         // Sum[0..0] = -5
@@ -175,7 +175,7 @@ class AddBinaryIndexed1BasedTest {
     @Test
     void testSingleElementArray() {
         // Create a BIT with a single element
-        int[] singleElement = {42};
+        int[] singleElement = { 42 };
         AddBinaryIndexed1Based singleBit = new AddBinaryIndexed1Based(singleElement);
 
         // Prefix sum at index 0 should be 42
@@ -188,4 +188,3 @@ class AddBinaryIndexed1BasedTest {
         assertEquals(50, singleBit.calculate(0), "Prefix sum after adding 8 should be 50.");
     }
 }
-

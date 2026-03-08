@@ -1,4 +1,4 @@
-package tri.vo.dslearn;
+package tri.vo.dslearn.binaryindexedtree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,7 @@ public class BinaryIndexedTree<T> {
     private final T identifyValue;
     private final BinaryOperator<T> invertFunc;
 
-    BinaryIndexedTree(
-            List<T> input, BinaryOperator<T> func, T identifyValue, BinaryOperator<T> invertFunc) {
+    BinaryIndexedTree(List<T> input, BinaryOperator<T> func, T identifyValue, BinaryOperator<T> invertFunc) {
         this.func = func;
         this.identifyValue = identifyValue;
         this.invertFunc = invertFunc;
